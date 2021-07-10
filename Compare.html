@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Comapre</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='F.css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+     
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-analytics.js"></script>
+
+    
+</head>
+<style>
+  .container
+  {
+    background-color: aqua;
+
+  }
+</style>
+<body>
+  
+  
+    <center>
+        <h5 style="text-align:center">Daily Values</h5>
+        
+        <div  class="container" >
+        <form id="f1">
+            <label for"No">Index</label> <br>
+            <input type="text" id="No" style=" width:250px; font-size:14pt;" name="No" placeholder="Index"><br>
+            <label for"Fan">Fan</label><br>
+            <input type="text" id="Fan" style=" width:250px; font-size:14pt;" name="Fan" placeholder="Fan"><br>
+            <label for"AC">AC</label><br>
+            <input type="text" id="AC" style=" width:250px; font-size:14pt;" name="AC" placeholder="AC"><br>
+            <label for"Fridge">Fridge</label><br>
+            <input type="text" id="Fridge" style=" width:250px; font-size:14pt;" name="Fridge" placeholder="Fridge"><br>
+            <label for"TV">TV</label><br>
+            <input type="text" id="TV" style=" width:250px; font-size:14pt;" name="TV" placeholder="TV"><br>
+           
+            <label for"Iron">Iron</label><br>
+            <input type="text" id="Iron" style=" width:250px; font-size:14pt;" name="Iron" placeholder="Iron"><br>
+            <label for"Geyser">Geyser</label><br>
+            <input type="text" id="Geyser" style=" width:250px; font-size:14pt;"  name="Geyser" placeholder="Geyser"><br>
+            <label for"Tubelights">Tubelights</label><br>
+            <input type="text" id="Tubelights" style=" width:250px; font-size:14pt;" name="Tubelights" placeholder="Tubelights"><br>
+            <label for"Induction">Induction</label><br>
+            <input type="text" id="Induction" style=" width:250px; font-size:14pt;" name="Induction" placeholder="Induction"><br>
+           
+            <p align="center">
+            <button id="b1" onclick="calcSum()">Submit</button>
+            </p>
+
+        </form>
+        <script>
+          function calcSum() {
+              let num1 = document.getElementsByName("Fan")[0].value;
+              let num2 = document.getElementsByName("AC")[0].value;
+              let num3 = document.getElementsByName("Fridge")[0].value;
+              let num4 = document.getElementsByName("TV")[0].value;
+              let num5 = document.getElementsByName("Iron")[0].value;
+              let num6 = document.getElementsByName("Geyser")[0].value;
+              let num7 = document.getElementsByName("Tubelights")[0].value;
+              let num8 = document.getElementsByName("Induction")[0].value;
+              let sum = Number(num1) + Number(num2) + Number(num3) + Number(num4) + Number(num5) + Number(num6) + Number(num7) + Number(num8);
+              sum=sum*50 ;
+              document.getElementsByName("sum")[0].value = sum;
+          }
+      </script>
+        
+        
+
+
+        
+    </div>
+    <div id='div1' style='display: none;'>
+      <form>
+      Predicted Bill:<br> <input type="text" style=" width:150px; font-size:14pt;" name="sum"><br>
+    </form>
+      <table id="Comparer" class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Index</th>
+            <th>Fan</th> 
+            <th>AC</th>
+            <th>Fridge</th>
+            <th>TV</th>
+            <th>Iron</th>
+            <th>Geyser</th>
+            <th>Tubelights</th>
+            <th>Induction</th>
+          </tr>
+        </thead>
+      </table>
+        </div>
+          
+
+
+      
+        <form method="get" action="file:///D:/Experiments/SE/Lab/Prototype/Main.html">
+            <p align="right">
+                <button class="btn btn-primary btn-dark btn-sm">Back</button>
+            </p> 
+        </form>
+    </center>
+   
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyCbnJvH0nSbqgq-wEAYvRzwwvQrUNC1LTs",
+    authDomain: "se-8-prototype.firebaseapp.com",
+    databaseURL: "https://se-8-prototype.firebaseio.com",
+    projectId: "se-8-prototype",
+    storageBucket: "se-8-prototype.appspot.com",
+    messagingSenderId: "124474403871",
+    appId: "1:124474403871:web:cbb15840340a06e9e1b92a",
+    measurementId: "G-DH5LVY7C03"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  const db= firebase.firestore();
+  db.settings({ timestampsInSnapshots: true });
+  
+ 
+</script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src='Webapp.js'></script>
+    
+</body>
+</html>

@@ -1,0 +1,98 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic);
+* {
+  margin: 5px;
+  padding: 5px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    color: black;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  option, select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    color: black;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+ 
+
+body {
+  background-color: aqua;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  font-size: 40px;
+  background-image: url("‪1.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  
+}
+
+h5{
+    
+  margin: 20px;
+  font-size:60px;
+  color:black ;
+}
+
+.btn-primary btn-sm
+{
+  background-color: #555555;
+}
+
+  button {
+    background-color: goldenrod; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    cursor: potexter;
+    }
+    
+    b8
+    {
+      background-color: black; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    cursor: potexter;
+
+    }
+    table {
+      border-collapse: collapse;
+      column-fill: auto;
+    }
+    li{
+      font-size: 20px;
+      margin: 20px;
+    }
+
+
+
+
+
+

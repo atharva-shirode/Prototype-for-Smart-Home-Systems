@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Prediction</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='F.css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+     
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+
+
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-analytics.js"></script>
+
+   
+</head>
+<style>
+  .container
+  {
+    background-color: aqua;
+
+  }
+  
+</style>
+<body>
+  <center>
+    <h5 style="text-align:center">Enter the Current Temparature</h5>
+    <div class="container">
+        <form id="f2">
+            <label for "Temp">Choose the Range </label><br>
+           <select id="Temp" name="Temp" style="width: 700px !important; min-width: 50px; max-width: 200px;">
+               <option value="20-25">20-25</option>
+               <option value="25-30">25-30</option>
+               <option value="30-35">30-35</option>
+                <option value="35-40">35-40</option>
+           </select><br> <br> <br> <br> <br> <br><br><br>
+           <p align="center">
+            <button id ="b5" type="button">Submit</button> <br>
+            </p>
+           
+
+        </form>
+      </div>
+
+
+    <div id='div55' style='display: none;'>
+        <table id="Prediction" class="table table-striped">
+          <thead class="thead-dark">
+            <tr>
+              <th>Type</th>
+              <th>Fan</th> 
+              <th>AC</th>
+              
+            </tr>
+          </thead>
+        </table>
+          </div>
+    
+
+          <form method="get" action="file:///D:/Experiments/SE/Lab/Prototype/Main.html">
+            <p align="right">
+                <button class="btn btn-primary btn-sm btn-dark">Back</button>
+            </p> 
+        </form>
+        <script>
+          // Your web app's Firebase configuration
+          // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+          var firebaseConfig = {
+            apiKey: "AIzaSyCbnJvH0nSbqgq-wEAYvRzwwvQrUNC1LTs",
+            authDomain: "se-8-prototype.firebaseapp.com",
+            databaseURL: "https://se-8-prototype.firebaseio.com",
+            projectId: "se-8-prototype",
+            storageBucket: "se-8-prototype.appspot.com",
+            messagingSenderId: "124474403871",
+            appId: "1:124474403871:web:cbb15840340a06e9e1b92a",
+            measurementId: "G-DH5LVY7C03"
+          };
+          // Initialize Firebase
+          firebase.initializeApp(firebaseConfig);
+          firebase.analytics();
+          const db= firebase.firestore();
+          db.settings({ timestampsInSnapshots: true });
+          
+         
+        </script>
+        <script src='Webapp2.js'></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+      </center>
+            
+</body>
+</html>
