@@ -3,4 +3,4 @@ The aim of the product is to optimize utilisation of Power supply provided to th
 
 The codes serve as a prototype for the above service.About doc shows the flow along with images and snippets.
 
-Tech Stack: Html,CSS,Firebase
+Tech Stack: Html,CSS,Javascript,Firebase
